@@ -972,7 +972,7 @@ html {
   -webkit-box-pack: center;
           justify-content: center;
   -webkit-box-align: stretch;
-          align-items: stretch;
+          /*align-items: stretch;*/
 }
 @media (min-width: 600px) {
   .page-content {
@@ -1006,7 +1006,7 @@ html {
   position: relative;
   display: inline-block;
   -webkit-box-align: stretch;
-          align-items: stretch;
+          /*align-items: stretch;*/
   overflow: hidden;
   padding: 1rem;
   width: 100%;
@@ -1097,7 +1097,7 @@ html {
   -webkit-box-direction: normal;
           flex-direction: column;
   -webkit-box-align: center;
-          align-items: center;
+          /*align-items: center;*/
   width: 100%;
   padding: 1rem;
   -webkit-transition: -webkit-transform var(--d) var(--e);
@@ -1162,7 +1162,7 @@ html {
   .card2:hover,
   .card2:focus-within {
     -webkit-box-align: center;
-            align-items: center;
+            /*align-items: center;*/
   }
   .card2:hover:before,
   .card2:focus-within:before {
