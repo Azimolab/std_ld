@@ -64,8 +64,6 @@ html {
 }
 .back__slide:nth-child(even) .progress {
   background: #000000;
-  -webkit-transform-origin: 100% 50%;
-          transform-origin: 100% 50%;
   opacity: 0.5;
 }
 .back__slide:nth-child(1):before {
@@ -73,11 +71,7 @@ html {
   opacity: 0.1;
 }
 .back__slide:nth-child(2):before {
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4530986/Fundo_1920x1080px_v2.png");
   opacity: 0.2;
-  background-repeat: no-repeat;
-  background-size: 101% auto;
-  background-position: right calc(50% - 14rem);
 }
 .back__slide:nth-child(2) .back-front-image {
   position: absolute;
@@ -85,14 +79,12 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4530986/Fundo_1920x1080px_v2.png");
+  background-image: url("https://assets.codepen.io/4530986/Fundo_1920x1080px_v2.png");
   background-size: 101% auto;
-  background-position: center calc(50% + 21rem);
+  background-position: center;
   background-repeat: no-repeat;
   z-index: 0;
   opacity: 0;
-  -webkit-transform: translate3d(0, 10rem, 0);
-          transform: translate3d(0, 10rem, 0);
   -webkit-transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
   transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
@@ -102,17 +94,11 @@ html {
   content: "";
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(80%, #ffffff));
   background: linear-gradient(rgba(255, 255, 255, 0), #ffffff 80%);
-  display: block;
-  position: absolute;
   left: 0;
-  top: calc(50% + 20rem);
-  height: 20.5rem;
   width: 100%;
 }
 .back__slide:nth-child(2).active .back-front-image {
   opacity: 0.2;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
   -webkit-transition: opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear;
@@ -309,7 +295,6 @@ html {
   overflow: hidden;
 }
 .card__slide:nth-child(2) .image {
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4530986/Fundo_1920x1080px_v3.png");
   background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -318,12 +303,26 @@ html {
   position: absolute;
   top: 5%;
   left: -5vw;
-  -webkit-transform: translate3d(0, 20%, 0);
-          transform: translate3d(0, 20%, 0);
   z-index: 2;
   opacity: 0;
   pointer-events: none;
   z-index: 1;
+  -webkit-transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
+  transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
+  transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
+  transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
+}
+.card__slide:nth-child(2) .image2 {
+  overflow: hidden;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  background-image: url("https://assets.codepen.io/4530986/Head.png");
+  background-repeat: no-repeat;
+  width: 75vw;
+  height: 10vw;
+  z-index: 3;
+  opacity: 0;
   -webkit-transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
   transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
@@ -335,8 +334,8 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4530986/Fundo_1920x1080px_v2.png");
-  background-size: 135% auto;
+  background-image: url("https://assets.codepen.io/4530986/Fundo_1920x1080px_v4.png");
+  background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
   z-index: 1;
@@ -361,6 +360,15 @@ html {
   top: 50%;
 }
 .card__slide:nth-child(2).active .image {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear;
+  transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.card__slide:nth-child(2).active .image2 {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
@@ -628,13 +636,11 @@ html {
 }
 .content__slide:nth-child(even) .button {
   background: transparent;
-  position: relative;
+  position: absolute;
   color: #ffffff;
-  font-size: 1rem;
-  border: 0.15rem solid #000000;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-  left: 80%;
-  top: 80%;
+  font-size: 0.8rem;
+  left: 90%;
+  top: 40%;
   opacity: 0.2;
   z-index: 5;
 }
@@ -959,7 +965,7 @@ html {
   font-family: "Open Sans";
   width: 110%;
   height: 58%;
-  left: 45%;
+  left: 43%;
   top: 67%;
   opacity: 0;
   z-index: 2;
@@ -1083,6 +1089,7 @@ html {
 }
 
 .content2 {
+  overflow: hidden;
   position: relative;
   display: -webkit-box;
   display: flex;
@@ -1099,14 +1106,12 @@ html {
   transition: transform var(--d) var(--e), -webkit-transform var(--d) var(--e);
   z-index: 1;
 }
-.content2 > * + * {
-  margin-top: 1rem;
-}
 
 .title2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
   line-height: 1;
+  text-align: left;
 }
 
 .copy {
@@ -1114,6 +1119,7 @@ html {
   font-size: 1.3rem;
   font-style: italic;
   line-height: 1.35;
+  text-align: left;
 }
 
 .btn {
@@ -1132,7 +1138,6 @@ html {
   background-color: #0d0d0d;
 }
 .btn:focus {
-  outline: 1px dashed yellow;
   outline-offset: 3px;
 }
 
@@ -1143,13 +1148,11 @@ html {
   }
 
   .content2 {
-    -webkit-transform: translateY(calc(100% - 4.5rem));
-            transform: translateY(calc(100% - 4.5rem));
+    -webkit-transform: translateY(calc(50%));
+            transform: translateY(calc(50%));
   }
   .content2 > *:not(.title2) {
     opacity: 0;
-    -webkit-transform: translateY(1rem);
-            transform: translateY(1rem);
     -webkit-transition: opacity var(--d) var(--e), -webkit-transform var(--d) var(--e);
     transition: opacity var(--d) var(--e), -webkit-transform var(--d) var(--e);
     transition: transform var(--d) var(--e), opacity var(--d) var(--e);
@@ -1173,8 +1176,8 @@ html {
   }
   .card2:hover .content2,
   .card2:focus-within .content2 {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
   .card2:hover .content2 > *:not(.title2),
   .card2:focus-within .content2 > *:not(.title2) {
@@ -1287,3 +1290,24 @@ a1 {
   -webkit-animation: shadow 12s ease-in-out infinite;
           animation: shadow 12s ease-in-out infinite;
 }
+
+.btn {
+  background: black;
+  font-size: 1rem;
+  font-family: "Open Sans", "Open Sans";
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  color: #ffffff;
+  margin-top: 1px;
+  border-top: 0.15rem solid #b32844;
+  border-bottom: 0.15rem solid #170d14;
+  box-shadow: 0 1rem 2rem rgba(23, 13, 20, 0.2);
+  -webkit-transition: -webkit-transform 1125ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: -webkit-transform 1125ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 1125ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 1125ms cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 1125ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Gray */
