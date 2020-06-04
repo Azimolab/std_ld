@@ -959,7 +959,7 @@ html {
 
 .page-content {
   position: absolute;
-  display: grid;
+  display: inline-flex;
   grid-gap: 1rem;
   padding: 1rem;
   font-family: "Open Sans";
