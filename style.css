@@ -15,7 +15,7 @@ html {
 }
 
 .wrap {
-  display: grid;
+  display: inline-flex;
 }
 
 .back {
