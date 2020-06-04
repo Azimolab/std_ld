@@ -1057,7 +1057,7 @@ html {
 }
 .card2:after {
   content: '';
-  display: inline-block;
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -1093,7 +1093,7 @@ html {
   overflow: hidden;
   position: relative;
   display: -webkit-box;
-  display: inline-block;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
@@ -1197,7 +1197,7 @@ html {
   }
 }
 .container2 {
-  display: inline-block;
+  display: relative;
   opacity: 0.5;
   width: 0%;
   height: 0%;
@@ -1276,7 +1276,7 @@ html {
   }
 }
 a1 {
-  display: inline-block;
+  display: block;
   -webkit-animation: float 12s ease-in-out infinite;
           animation: float 12s ease-in-out infinite;
 }
