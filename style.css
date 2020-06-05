@@ -100,7 +100,7 @@ html {
   width: 100%;
 }
 .back__slide:nth-child(2).active .back-front-image {
-  opacity: 0.2;
+  opacity: 0.8;
   -webkit-transition: opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear;
@@ -552,7 +552,7 @@ html {
 
 .content__slide {
   
-  position: absolute;
+position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -592,6 +592,7 @@ html {
   transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear;
   transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
+
 .content__slide.active .title__line:before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
@@ -602,6 +603,8 @@ html {
   -webkit-transition-delay: 2250ms;
           transition-delay: 2250ms;
 }
+
+
 .content__slide.active .title__line:nth-child(2):before {
   -webkit-transition-delay: 2700ms;
           transition-delay: 2700ms;
@@ -1168,7 +1171,7 @@ html {
 
 .title2 {
  
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: bold;
   font-style: italic;
   line-height: 1.1;
@@ -1282,13 +1285,15 @@ html {
             transition-duration: 0s;
   }
 }
+
 .container2 {
-  display: relative;
+  display: block;
   opacity: 0.5;
-  width: 0%;
-  height: 0%;
+  width: 20px;
+  height: 20px;
   left: 0%;
   top: 0%;
+  align-items: flex-end;
   z-index: 5;
 }
 
