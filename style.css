@@ -15,7 +15,7 @@ html {
 }
 
 .wrap {
-  display: inline-flex;
+  display: grid;
 }
 
 .back {
@@ -67,7 +67,7 @@ html {
   opacity: 0.5;
 }
 .back__slide:nth-child(1):before {
-  background-image: url("https://raw.githubusercontent.com/Azimolab/std_ld/master/assets/Fundo_1920x1080px.png");
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4530986/bgb4.jpg");
   opacity: 0.1;
 }
 .back__slide:nth-child(2):before {
@@ -79,8 +79,8 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://raw.githubusercontent.com/Azimolab/std_ld/master/assets/Fundo_1920x1080px_v2.png");
-  background-size: 101% auto;
+  background-image: url("https://assets.codepen.io/4530986/Fundo_1920x1080px_v2.png");
+  background-size: 110% auto;
   background-position: center;
   background-repeat: no-repeat;
   z-index: 0;
@@ -90,6 +90,8 @@ html {
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
 }
+
+
 .back__slide:nth-child(2) .back-front-image:after {
   content: "";
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(80%, #ffffff));
@@ -246,7 +248,7 @@ html {
   transition: transform 1350ms 1575ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 1575ms linear, -webkit-transform 1350ms 1575ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .card__slide:nth-child(1) .image {
-  background-image: url("https://raw.githubusercontent.com/Azimolab/std_ld/master/assets/autonomous-networks-1440x1105.png");
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4530986/autonomous-networks-1440x1105.png");
   background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -260,6 +262,7 @@ html {
   z-index: 2;
   opacity: 0;
 }
+
 .card__slide:nth-child(1).active .image {
   opacity: 1;
   -webkit-transform: translate3d(-50%, -50%, 0);
@@ -269,6 +272,7 @@ html {
   transition: transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2250ms linear;
   transition: transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2250ms linear, -webkit-transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
+
 .card__slide:nth-child(1).exit .image {
   -webkit-transform: translate3d(-45%, -60%, 0);
           transform: translate3d(-45%, -60%, 0);
@@ -284,7 +288,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://raw.githubusercontent.com/Azimolab/std_ld/master/assets/Fundo_1920x1080px.png");
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4530986/bgb4.jpg");
   background-size: 135% auto;
   background-position: center;
   opacity: 0.15;
@@ -312,29 +316,14 @@ html {
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
 }
-.card__slide:nth-child(2) .image2 {
-  overflow: hidden;
-  position: absolute;
-  left: 10%;
-  top: 10%;
-  background-image: url("https://raw.githubusercontent.com/Azimolab/std_ld/master/assets/Head.png");
-  background-repeat: no-repeat;
-  width: 75vw;
-  height: 10vw;
-  z-index: 3;
-  opacity: 0;
-  -webkit-transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
-  transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
-  transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
-  transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
-}
+
 .card__slide:nth-child(2) .back-image {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://raw.githubusercontent.com/Azimolab/std_ld/master/assets/Fundo_1920x1080px_v4.png");
+  background-image: url("https://raw.githubusercontent.com/Azimolab/std_ld/master/assets/Fundo_1920x1080px_v5.png");
   background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -368,15 +357,7 @@ html {
   transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear;
   transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.card__slide:nth-child(2).active .image2 {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  -webkit-transition: opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear;
-  transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
-}
+
 .card__slide:nth-child(2).active .back-image {
   opacity: 1;
   -webkit-transform: translatey(-2rem);
@@ -443,13 +424,14 @@ html {
 
 .content {
   position: absolute;
-  left: 18%;
+  left: 8%;
   top: 50%;
   -webkit-transform: translatey(-50%);
           transform: translatey(-50%);
-  width: 75%;
+  width: 85%;
   height: 90%;
   z-index: 2;
+  
 }
 .content__ping {
   position: absolute;
@@ -564,16 +546,51 @@ html {
   -webkit-animation: none !important;
           animation: none !important;
 }
+
+
+
+
 .content__slide {
+  
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
+
+  
 }
 .content__slide.active {
   pointer-events: auto;
+  
+}
+
+.content__slide.active .image2 {
+  overflow: hidden;
+  position: absolute;
+  display: inline-flex;
+  background-image: url("https://raw.githubusercontent.com/Azimolab/std_ld/master/assets/Head2.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 100%;
+  height: 25%;
+  z-index: 3;
+  opacity: 1;
+  -webkit-transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
+  transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
+  transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
+  transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
+}
+
+.content__slide.active .active .image2 {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear;
+  transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .content__slide.active .title__line:before {
   -webkit-transform: scaleX(1);
@@ -747,17 +764,24 @@ html {
 }
 
 .title {
+  display: flex;
   color: #ffffff;
-  font-size: 4.5rem;
+  font-size: 2.8rem;
   font-family: "Open Sans", "Open Sans";
-  line-height: 1.2;
+  line-height: 1.3;
   letter-spacing: 0.03em;
-  text-align: right;
-  height: 7%;
+  text-align: left;
+  margin-top: 14%;
+  margin-left: 55%;
+  width: 20vw;
+  height: 6vw;
+
+  
 }
 .title__line {
   display: inline-block;
   position: relative;
+  
 }
 .title__line:before {
   background: -webkit-gradient(linear, left top, right top, from(#170d14), to(#b32844));
@@ -786,35 +810,44 @@ html {
 .title__inner {
   position: relative;
   display: inline-block;
+  
 }
 
 .desc {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-family: "Open Sans", "Open Sans";
-  line-height: 1.6;
-  margin: 0 0 3.6rem;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 1;
   color: #ffffff;
   text-align: right;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  display: flex;
+  text-align: left;
+  margin-top: 0%;
+  margin-left: 55%;
+  max-width: 45%;
+  max-height: 16vw;
 }
 
 .button {
   background: rgba(0, 0, 0, 0.2);
   display: relative;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-family: "Open Sans", "Open Sans";
   text-transform: uppercase;
-  left: 15%;
-  lne-height: 1;
+  margin-left: 55%;
+  
+  font-style: italic;
+  font-weight: bold;
+  line-height: 1;
   font-weight: 600;
-  letter-spacing: 0.1em;
-  padding: 1.15rem 3rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
   position: relative;
   z-index: 5;
   color: #ffffff;
-  border-top: 0.15rem solid #b32844;
-  border-bottom: 0.15rem solid #170d14;
+  border-top: 0.15rem solid white;
   box-shadow: 0 1rem 2rem rgba(23, 13, 20, 0.2);
   -webkit-transition: -webkit-transform 1125ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: -webkit-transform 1125ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -877,7 +910,7 @@ html {
           transform: translatey(-0.5rem);
 }
 .button:hover .button__hover {
-  background-color: blue;
+
   -webkit-animation: swipe 1125ms forwards;
           animation: swipe 1125ms forwards;
 }
@@ -936,6 +969,7 @@ html {
 .title__inner,
 .desc,
 .button-wrap {
+  margin-top: 5%;
   opacity: 0;
   -webkit-transform: translatey(2.5rem);
           transform: translatey(2.5rem);
@@ -957,32 +991,36 @@ html {
   box-sizing: border-box;
 }
 
+
+
+
+
+
+
+
+
+
 .page-content {
   position: absolute;
   display: inline-flex;
-  /*display: grid;;*/
-  grid-gap: 1rem;
-  padding: 1rem;
   font-family: "Open Sans";
-  width: 110%;
-  height: 58%;
-  left: 43%;
-  top: 67%;
+  width: 94%;
+  height: 55%;
+  left: 50%;
+  top: 50%;
   opacity: 0;
   z-index: 2;
   -webkit-box-pack: center;
           justify-content: center;
   -webkit-box-align: stretch;
-          /*align-items: stretch;*/
+          align-items: stretch;
 }
 @media (min-width: 600px) {
-  .page-content {
-    grid-template-columns: repeat(1, 1fr);
+  .page-content {  
   }
 }
 @media (min-width: 800px) {
-  .page-content {
-    grid-template-columns: repeat(5, 1fr);
+  .page-content { 
   }
 }
 .page-content.active {
@@ -1006,19 +1044,16 @@ html {
 .card2 {
   position: relative;
   display: inline-block;
-  -webkit-box-align: stretch;
-          /*align-items: stretch;*/
   overflow: hidden;
-  padding: 1rem;
   width: 100%;
-  text-align: center;
   color: whitesmoke;
   background-color: whitesmoke;
+  margin: 6px;
   opacity: 1;
   z-index: 2;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .card2 {
     height: auto;
   }
@@ -1074,31 +1109,30 @@ html {
   transition: transform calc(var(--d) * 2) var(--e), -webkit-transform calc(var(--d) * 2) var(--e);
 }
 .card2:nth-child(1):before {
-  background-image: url(https://raw.githubusercontent.com/Azimolab/std_ld/master/assets/Quadrado5.png);
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4530986/Quadrado5.png);
 }
 .card2:nth-child(2):before {
-  background-image: url(https://raw.githubusercontent.com/Azimolab/std_ld/master/assets/Quadrado2.png);
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4530986/Quadrado2.png);
 }
 .card2:nth-child(3):before {
-  background-image: url(https://raw.githubusercontent.com/Azimolab/std_ld/master/assets/Quadrado3.png);
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4530986/Quadrado3.png);
 }
 .card2:nth-child(4):before {
-  background-image: url(https://raw.githubusercontent.com/Azimolab/std_ld/master/assets/Quadrado1.png);
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4530986/Quadrado1.png);
 }
 .card2:nth-child(5):before {
-  background-image: url(https://raw.githubusercontent.com/Azimolab/std_ld/master/assets/Quadrado4.png);
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4530986/Quadrado4.png);
 }
 
 .content2 {
   overflow: hidden;
   position: relative;
   display: -webkit-box;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
   -webkit-box-align: center;
-          /*align-items: center;*/
+          align-items: center;
   width: 100%;
   padding: 1rem;
   -webkit-transition: -webkit-transform var(--d) var(--e);
@@ -1109,18 +1143,41 @@ html {
 }
 
 .title2 {
-  font-size: 1.6rem;
+ 
+  font-size: 1.7rem;
   font-weight: bold;
-  line-height: 1;
+  font-style: italic;
+  line-height: 1.1;
+  height: 100px;
+  position: relative;
+  z-index: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   text-align: left;
+  letter-spacing: normal;
+  -o-object-fit: fill;
+  object-fit: fill;
 }
 
 .copy {
   font-family: "Open Sans";
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-style: italic;
+  font-weight: bold;
   line-height: 1.35;
   text-align: left;
+  height: 100px;
 }
 
 .btn {
@@ -1163,7 +1220,7 @@ html {
   .card2:hover,
   .card2:focus-within {
     -webkit-box-align: center;
-            /*align-items: center;*/
+            align-items: center;
   }
   .card2:hover:before,
   .card2:focus-within:before {
