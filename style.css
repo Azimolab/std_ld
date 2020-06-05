@@ -68,7 +68,7 @@ html {
 }
 .back__slide:nth-child(1):before {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4530986/bgb4.jpg");
-  opacity: 0.1;
+  opacity: 0.2;
 }
 .back__slide:nth-child(2):before {
   opacity: 0.2;
@@ -288,10 +288,10 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4530986/bgb4.jpg");
-  background-size: 135% auto;
+  background-image: url("https://raw.githubusercontent.com/Azimolab/std_ld/master/assets/Asset%203.png");
+  background-size: 100% auto;
   background-position: center;
-  opacity: 0.15;
+  opacity: 1;
   -webkit-filter: contrast(150%);
           filter: contrast(150%);
 }
