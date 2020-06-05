@@ -80,7 +80,7 @@ html {
   width: 100%;
   height: 100%;
   background-image: url("https://assets.codepen.io/4530986/Fundo_1920x1080px_v2.png");
-  background-size: 110% auto;
+  background-size: 135% auto;
   background-position: center;
   background-repeat: no-repeat;
   z-index: 0;
@@ -318,7 +318,7 @@ html {
 }
 
 .card__slide:nth-child(2) .back-image {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
