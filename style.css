@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
 * {
   -webkit-backface-visibility: hidden;
@@ -15,6 +22,7 @@ html {
 }
 
 .wrap {
+  display: -ms-grid;
   display: grid;
 }
 
@@ -30,6 +38,7 @@ html {
   opacity: 0;
   background: #1c1c1c;
   -webkit-transition: opacity 675ms 1800ms linear;
+  -o-transition: opacity 675ms 1800ms linear;
   transition: opacity 675ms 1800ms linear;
 }
 .back__slide .progress {
@@ -40,11 +49,14 @@ html {
   height: 0.25rem;
   opacity: 0.5;
   background: -webkit-gradient(linear, left top, right top, from(#170d14), to(#b32844));
+  background: -o-linear-gradient(left, #170d14, #b32844);
   background: linear-gradient(90deg, #170d14, #b32844);
   -webkit-transform-origin: 0% 50%;
-          transform-origin: 0% 50%;
+          -ms-transform-origin: 0% 50%;
+      transform-origin: 0% 50%;
   -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+          -ms-transform: scaleX(0);
+      transform: scaleX(0);
 }
 .back__slide:before {
   content: "";
@@ -87,6 +99,7 @@ html {
   opacity: 0;
   -webkit-transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
   transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
+  -o-transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
 }
@@ -95,6 +108,7 @@ html {
 .back__slide:nth-child(2) .back-front-image:after {
   content: "";
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(80%, #ffffff));
+  background: -o-linear-gradient(rgba(255, 255, 255, 0), #ffffff 80%);
   background: linear-gradient(rgba(255, 255, 255, 0), #ffffff 80%);
   left: 0;
   width: 100%;
@@ -103,6 +117,7 @@ html {
   opacity: 0.8;
   -webkit-transition: opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear;
   transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear;
   transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -124,63 +139,81 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  box-shadow: 0 0rem 2rem rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0 0rem 2rem rgba(0, 0, 0, 0);
+          box-shadow: 0 0rem 2rem rgba(0, 0, 0, 0);
   -webkit-transition: box-shadow 900ms 900ms linear;
+  -webkit-transition: -webkit-box-shadow 900ms 900ms linear;
+  transition: -webkit-box-shadow 900ms 900ms linear;
+  -o-transition: box-shadow 900ms 900ms linear;
   transition: box-shadow 900ms 900ms linear;
+  transition: box-shadow 900ms 900ms linear, -webkit-box-shadow 900ms 900ms linear;
 }
 .card__slide .number {
   opacity: 0;
   -webkit-transform: translatex(-5rem);
-          transform: translatex(-5rem);
+          -ms-transform: translatex(-5rem);
+      transform: translatex(-5rem);
   -webkit-transition: opacity 675ms 900ms linear, -webkit-transform 1350ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: opacity 675ms 900ms linear, -webkit-transform 1350ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: transform 1350ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 900ms linear;
   transition: transform 1350ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 900ms linear;
   transition: transform 1350ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 900ms linear, -webkit-transform 1350ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .card__slide .date {
   opacity: 0;
   -webkit-transform: translatex(-5rem) rotate(-90deg);
-          transform: translatex(-5rem) rotate(-90deg);
+          -ms-transform: translatex(-5rem) rotate(-90deg);
+      transform: translatex(-5rem) rotate(-90deg);
   -webkit-transition: opacity 675ms 900ms linear, -webkit-transform 1350ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: opacity 675ms 900ms linear, -webkit-transform 1350ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: transform 1350ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 900ms linear;
   transition: transform 1350ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 900ms linear;
   transition: transform 1350ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 900ms linear, -webkit-transform 1350ms 900ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .card__slide.active {
-  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
 }
 .card__slide.active .number {
   opacity: 1;
   -webkit-transform: translatex(0rem);
-          transform: translatex(0rem);
+          -ms-transform: translatex(0rem);
+      transform: translatex(0rem);
   -webkit-transition: opacity 675ms 2025ms linear, -webkit-transform 1350ms 2025ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: opacity 675ms 2025ms linear, -webkit-transform 1350ms 2025ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: transform 1350ms 2025ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2025ms linear;
   transition: transform 1350ms 2025ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2025ms linear;
   transition: transform 1350ms 2025ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2025ms linear, -webkit-transform 1350ms 2025ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .card__slide.active .date {
   opacity: 1;
   -webkit-transform: translatex(0rem) rotate(-90deg);
-          transform: translatex(0rem) rotate(-90deg);
+          -ms-transform: translatex(0rem) rotate(-90deg);
+      transform: translatex(0rem) rotate(-90deg);
   -webkit-transition: opacity 675ms 2025ms linear, -webkit-transform 1350ms 2025ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: opacity 675ms 2025ms linear, -webkit-transform 1350ms 2025ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: transform 1350ms 2025ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2025ms linear;
   transition: transform 1350ms 2025ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2025ms linear;
   transition: transform 1350ms 2025ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2025ms linear, -webkit-transform 1350ms 2025ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .card__slide.exit .number {
   -webkit-transform: translatex(0rem);
-          transform: translatex(0rem);
+          -ms-transform: translatex(0rem);
+      transform: translatex(0rem);
   -webkit-transition: opacity 450ms 2250ms linear, -webkit-transform 1350ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: opacity 450ms 2250ms linear, -webkit-transform 1350ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: transform 1350ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 450ms 2250ms linear;
   transition: transform 1350ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 450ms 2250ms linear;
   transition: transform 1350ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 450ms 2250ms linear, -webkit-transform 1350ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .card__slide.exit .date {
   -webkit-transform: translatex(5rem) rotate(-90deg);
-          transform: translatex(5rem) rotate(-90deg);
+          -ms-transform: translatex(5rem) rotate(-90deg);
+      transform: translatex(5rem) rotate(-90deg);
 }
 .card__slide:nth-child(even) {
-  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
 }
 .card__slide:nth-child(even) .date,
 .card__slide:nth-child(even) .number {
@@ -207,43 +240,54 @@ html {
   height: 100%;
   background-color: #ffffff;
   -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+          -ms-transform: scaleX(0);
+      transform: scaleX(0);
   -webkit-transform-origin: 100% 50%;
-          transform-origin: 100% 50%;
+          -ms-transform-origin: 100% 50%;
+      transform-origin: 100% 50%;
   -webkit-transition: -webkit-transform 1125ms 1350ms ease-in-out;
   transition: -webkit-transform 1125ms 1350ms ease-in-out;
+  -o-transition: transform 1125ms 1350ms ease-in-out;
   transition: transform 1125ms 1350ms ease-in-out;
   transition: transform 1125ms 1350ms ease-in-out, -webkit-transform 1125ms 1350ms ease-in-out;
 }
 .card__slide:nth-child(even).active {
-  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
 }
 .card__slide:nth-child(even).active .number {
   opacity: 1;
   -webkit-transition: opacity 450ms 900ms linear;
+  -o-transition: opacity 450ms 900ms linear;
   transition: opacity 450ms 900ms linear;
 }
 .card__slide:nth-child(even).active .date {
   -webkit-transition: opacity 675ms 2700ms linear, -webkit-transform 1350ms 2700ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: opacity 675ms 2700ms linear, -webkit-transform 1350ms 2700ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: transform 1350ms 2700ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2700ms linear;
   transition: transform 1350ms 2700ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2700ms linear;
   transition: transform 1350ms 2700ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2700ms linear, -webkit-transform 1350ms 2700ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .card__slide:nth-child(even).active:after {
   -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+          -ms-transform: scaleX(1);
+      transform: scaleX(1);
   -webkit-transform-origin: 0% 50%;
-          transform-origin: 0% 50%;
+          -ms-transform-origin: 0% 50%;
+      transform-origin: 0% 50%;
 }
 .card__slide:nth-child(even).exit .date {
   -webkit-transform: translatex(0rem) rotate(-90deg);
-          transform: translatex(0rem) rotate(-90deg);
+          -ms-transform: translatex(0rem) rotate(-90deg);
+      transform: translatex(0rem) rotate(-90deg);
 }
 .card__slide:nth-child(even).exit .number {
   -webkit-transform: translatex(4rem);
-          transform: translatex(4rem);
+          -ms-transform: translatex(4rem);
+      transform: translatex(4rem);
   -webkit-transition: opacity 675ms 1575ms linear, -webkit-transform 1350ms 1575ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: opacity 675ms 1575ms linear, -webkit-transform 1350ms 1575ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: transform 1350ms 1575ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 1575ms linear;
   transition: transform 1350ms 1575ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 1575ms linear;
   transition: transform 1350ms 1575ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 1575ms linear, -webkit-transform 1350ms 1575ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -269,6 +313,7 @@ html {
           transform: translate3d(-50%, -50%, 0);
   -webkit-transition: opacity 675ms 2250ms linear, -webkit-transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: opacity 675ms 2250ms linear, -webkit-transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2250ms linear;
   transition: transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2250ms linear;
   transition: transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2250ms linear, -webkit-transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -278,6 +323,7 @@ html {
           transform: translate3d(-45%, -60%, 0);
   -webkit-transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
   transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
+  -o-transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
 }
@@ -313,6 +359,7 @@ html {
   z-index: 1;
   -webkit-transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
   transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
+  -o-transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
 }
@@ -330,9 +377,11 @@ html {
   z-index: 1;
   opacity: 0;
   -webkit-transform: translatey(0);
-          transform: translatey(0);
+          -ms-transform: translatey(0);
+      transform: translatey(0);
   -webkit-transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
   transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
+  -o-transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
 }
@@ -351,6 +400,7 @@ html {
           transform: translate3d(0, 0, 0);
   -webkit-transition: opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear;
   transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear;
   transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -358,15 +408,18 @@ html {
 .card__slide:nth-child(2).active .back-image {
   opacity: 1;
   -webkit-transform: translatey(0rem);
-          transform: translatey(0rem);
+          -ms-transform: translatey(0rem);
+      transform: translatey(0rem);
   -webkit-transition: opacity 675ms 2250ms linear, -webkit-transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: opacity 675ms 2250ms linear, -webkit-transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2250ms linear;
   transition: transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2250ms linear;
   transition: transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2250ms linear, -webkit-transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .card__slide:nth-child(2).exit .back-image {
   -webkit-transform: translatey(-4rem);
-          transform: translatey(-4rem);
+          -ms-transform: translatey(-4rem);
+      transform: translatey(-4rem);
 }
 
 .number {
@@ -384,7 +437,8 @@ html {
   position: absolute;
   left: 50%;
   -webkit-transform: translatex(-50%);
-          transform: translatex(-50%);
+          -ms-transform: translatex(-50%);
+      transform: translatex(-50%);
   bottom: 2.5rem;
   display: block;
   height: 4rem;
@@ -402,9 +456,11 @@ html {
   width: 30%;
   top: calc(83% - 0.5rem);
   -webkit-transform-origin: 0 50%;
-          transform-origin: 0 50%;
+          -ms-transform-origin: 0 50%;
+      transform-origin: 0 50%;
   -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
 }
 .date__time {
   opacity: 0.25;
@@ -413,7 +469,8 @@ html {
   content: "";
   display: inline-block;
   -webkit-transform: translatey(-0.35rem);
-          transform: translatey(-0.35rem);
+          -ms-transform: translatey(-0.35rem);
+      transform: translatey(-0.35rem);
   width: 4rem;
   margin-right: 1.5rem;
   border-bottom: 0.15rem solid #ffffff;
@@ -424,7 +481,8 @@ html {
   left: 8%;
   top: 50%;
   -webkit-transform: translatey(-50%);
-          transform: translatey(-50%);
+          -ms-transform: translatey(-50%);
+      transform: translatey(-50%);
   width: 85%;
   height: 90%;
   z-index: 2;
@@ -436,6 +494,7 @@ html {
   width: 4rem;
   -webkit-transition: -webkit-transform 1125ms ease-out;
   transition: -webkit-transform 1125ms ease-out;
+  -o-transition: transform 1125ms ease-out;
   transition: transform 1125ms ease-out;
   transition: transform 1125ms ease-out, -webkit-transform 1125ms ease-out;
 }
@@ -446,6 +505,7 @@ html {
   background: #ffffff;
   width: 100%;
   -webkit-transition: background 450ms 1575ms linear;
+  -o-transition: background 450ms 1575ms linear;
   transition: background 450ms 1575ms linear;
   -webkit-animation: widenFromLeft 2700ms ease-out;
           animation: widenFromLeft 2700ms ease-out;
@@ -532,7 +592,8 @@ html {
 }
 .content__ping--right {
   -webkit-transform: translateX(35.5rem);
-          transform: translateX(35.5rem);
+          -ms-transform: translateX(35.5rem);
+      transform: translateX(35.5rem);
 }
 .content__ping--right:after {
   background: #000000;
@@ -566,6 +627,8 @@ position: absolute;
 .content__slide.active .image2 {
   overflow: hidden;
   position: absolute;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   background-image: url("https://raw.githubusercontent.com/Azimolab/std_ld/master/assets/Head2.png");
   background-repeat: no-repeat;
@@ -576,6 +639,7 @@ position: absolute;
   opacity: 1;
   -webkit-transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
   transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
+  -o-transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
 }
@@ -586,25 +650,30 @@ position: absolute;
           transform: translate3d(0, 0, 0);
   -webkit-transition: opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear;
   transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear;
   transition: transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2925ms linear, -webkit-transform 2700ms 2925ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .content__slide.active .title__line:before {
   -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+          -ms-transform: scaleX(1);
+      transform: scaleX(1);
   -webkit-transition: -webkit-transform 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: -webkit-transform 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: transform 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: transform 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: transform 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
   -webkit-transition-delay: 2250ms;
-          transition-delay: 2250ms;
+          -o-transition-delay: 2250ms;
+     transition-delay: 2250ms;
 }
 
 
 .content__slide.active .title__line:nth-child(2):before {
   -webkit-transition-delay: 2700ms;
-          transition-delay: 2700ms;
+          -o-transition-delay: 2700ms;
+     transition-delay: 2700ms;
 }
 .content__slide.active .title__inner,
 .content__slide.active .desc,
@@ -612,50 +681,61 @@ position: absolute;
 .content__slide.active .button-wrap {
   opacity: 1;
   -webkit-transform: translatey(0);
-          transform: translatey(0);
+          -ms-transform: translatey(0);
+      transform: translatey(0);
 }
 .content__slide.active .title__inner {
   -webkit-transition-delay: 3600ms;
-          transition-delay: 3600ms;
+          -o-transition-delay: 3600ms;
+     transition-delay: 3600ms;
 }
 .content__slide.active .desc {
   -webkit-transition-delay: 4050ms;
-          transition-delay: 4050ms;
+          -o-transition-delay: 4050ms;
+     transition-delay: 4050ms;
 }
 .content__slide.active .desc2 {
   -webkit-transition-delay: 4050ms;
-          transition-delay: 4050ms;
+          -o-transition-delay: 4050ms;
+     transition-delay: 4050ms;
 }
 .content__slide.active .button-wrap {
   -webkit-transition-delay: 4500ms;
-          transition-delay: 4500ms;
+          -o-transition-delay: 4500ms;
+     transition-delay: 4500ms;
 }
 .content__slide.exit .title__inner,
 .content__slide.exit .desc,
 .content__slide.exit .desc2,
 .content__slide.exit .button-wrap {
   -webkit-transform: translatey(-2.5rem);
-          transform: translatey(-2.5rem);
+          -ms-transform: translatey(-2.5rem);
+      transform: translatey(-2.5rem);
   -webkit-transition: opacity 675ms linear, -webkit-transform 900ms ease-out;
   transition: opacity 675ms linear, -webkit-transform 900ms ease-out;
+  -o-transition: transform 900ms ease-out, opacity 675ms linear;
   transition: transform 900ms ease-out, opacity 675ms linear;
   transition: transform 900ms ease-out, opacity 675ms linear, -webkit-transform 900ms ease-out;
 }
 .content__slide.exit .title__inner {
   -webkit-transition-delay: 337.5ms;
-          transition-delay: 337.5ms;
+          -o-transition-delay: 337.5ms;
+     transition-delay: 337.5ms;
 }
 .content__slide.exit .desc {
   -webkit-transition-delay: 675ms;
-          transition-delay: 675ms;
+          -o-transition-delay: 675ms;
+     transition-delay: 675ms;
 }
 .content__slide.exit .desc2 {
   -webkit-transition-delay: 675ms;
-          transition-delay: 675ms;
+          -o-transition-delay: 675ms;
+     transition-delay: 675ms;
 }
 .content__slide.exit .button-wrap {
   -webkit-transition-delay: 1012.5ms;
-          transition-delay: 1012.5ms;
+          -o-transition-delay: 1012.5ms;
+     transition-delay: 1012.5ms;
 }
 .content__slide:nth-child(even) .title {
   text-align: right;
@@ -766,11 +846,13 @@ position: absolute;
 .content__slide:nth-child(even) .title__line:before {
   left: -4rem;
   -webkit-transform-origin: 0% 50%;
-          transform-origin: 0% 50%;
+          -ms-transform-origin: 0% 50%;
+      transform-origin: 0% 50%;
 }
 .content__slide:nth-child(even).active .title__line:before {
   -webkit-transform-origin: 100% 50%;
-          transform-origin: 100% 50%;
+          -ms-transform-origin: 100% 50%;
+      transform-origin: 100% 50%;
 }
 
 .title {
@@ -794,15 +876,19 @@ position: absolute;
 }
 .title__line:before {
   background: -webkit-gradient(linear, left top, right top, from(#170d14), to(#b32844));
+  background: -o-linear-gradient(left, #170d14, #b32844);
   background: linear-gradient(90deg, #170d14, #b32844);
   -webkit-transform-origin: 100% 50%;
-          transform-origin: 100% 50%;
+          -ms-transform-origin: 100% 50%;
+      transform-origin: 100% 50%;
   -webkit-transition: -webkit-transform 1125ms ease-out;
   transition: -webkit-transform 1125ms ease-out;
+  -o-transition: transform 1125ms ease-out;
   transition: transform 1125ms ease-out;
   transition: transform 1125ms ease-out, -webkit-transform 1125ms ease-out;
   -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+          -ms-transform: scaleX(0);
+      transform: scaleX(0);
   content: "";
   display: block;
   position: absolute;
@@ -814,7 +900,8 @@ position: absolute;
 }
 .title__line:nth-child(2):before {
   -webkit-transition-delay: 450ms;
-          transition-delay: 450ms;
+          -o-transition-delay: 450ms;
+     transition-delay: 450ms;
 }
 .title__inner {
   position: relative;
@@ -830,6 +917,8 @@ position: absolute;
   line-height: 1.1;
   color: #ffffff;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   text-align: left;
   margin-top: 0%;
@@ -846,14 +935,20 @@ position: absolute;
   line-height: 1.2;
   color: #ffffff;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-align: left;
   margin-left: 55%;
   margin-bottom: 0px;
   max-width: 40%;
   height: 5%;
-  justify-content: flex-start;
-  align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   
 }
 
@@ -875,9 +970,11 @@ position: absolute;
   z-index: 5;
   color: #ffffff;
   border: 0.2rem solid white;
-  box-shadow: 0 1rem 2rem rgba(23, 13, 20, 0.2);
+  -webkit-box-shadow: 0 1rem 2rem rgba(23, 13, 20, 0.2);
+          box-shadow: 0 1rem 2rem rgba(23, 13, 20, 0.2);
   -webkit-transition: -webkit-transform 1125ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: -webkit-transform 1125ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: transform 1125ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: transform 1125ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: transform 1125ms cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 1125ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -888,6 +985,7 @@ position: absolute;
   height: 102%;
   width: 0.15rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#b32844), to(#170d14));
+  background: -o-linear-gradient(#b32844, #170d14);
   background: linear-gradient(#b32844, #170d14);
 }
 .button:before {
@@ -934,7 +1032,8 @@ position: absolute;
 }
 .button:hover {
   -webkit-transform: translatey(-0.5rem);
-          transform: translatey(-0.5rem);
+          -ms-transform: translatey(-0.5rem);
+      transform: translatey(-0.5rem);
 }
 .button:hover .button__hover {
 
@@ -1000,10 +1099,12 @@ position: absolute;
   margin-top: 3%;
   opacity: 0;
   -webkit-transform: translatey(2.5rem);
-          transform: translatey(2.5rem);
+          -ms-transform: translatey(2.5rem);
+      transform: translatey(2.5rem);
   position: relative;
   -webkit-transition: opacity 675ms linear, -webkit-transform 1800ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: opacity 675ms linear, -webkit-transform 1800ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: transform 1800ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms linear;
   transition: transform 1800ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms linear;
   transition: transform 1800ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms linear, -webkit-transform 1800ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -1016,7 +1117,8 @@ position: absolute;
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 
@@ -1030,6 +1132,8 @@ position: absolute;
 
 .page-content {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-family: "Open Sans";
   width: 94%;
@@ -1039,9 +1143,11 @@ position: absolute;
   opacity: 0;
   z-index: 2;
   -webkit-box-pack: center;
-          justify-content: center;
+          -ms-flex-pack: center;
+      justify-content: center;
   -webkit-box-align: stretch;
-          align-items: stretch;
+          -ms-flex-align: stretch;
+      align-items: stretch;
 }
 @media (min-width: 600px) {
   .page-content {  
@@ -1057,6 +1163,7 @@ position: absolute;
           transform: translate3d(-50%, -50%, 0);
   -webkit-transition: opacity 675ms 2250ms linear, -webkit-transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: opacity 675ms 2250ms linear, -webkit-transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2250ms linear;
   transition: transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2250ms linear;
   transition: transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2250ms linear, -webkit-transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -1065,6 +1172,7 @@ position: absolute;
           transform: translate3d(-45%, -60%, 0);
   -webkit-transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
   transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
+  -o-transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
 }
@@ -1078,7 +1186,8 @@ position: absolute;
   margin: 6px;
   opacity: 1;
   z-index: 2;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 700px) {
   .card2 {
@@ -1091,6 +1200,7 @@ position: absolute;
           transform: translate3d(-50%, -50%, 0);
   -webkit-transition: opacity 675ms 2250ms linear, -webkit-transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: opacity 675ms 2250ms linear, -webkit-transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2250ms linear;
   transition: transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2250ms linear;
   transition: transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2250ms linear, -webkit-transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -1099,6 +1209,7 @@ position: absolute;
           transform: translate3d(-45%, -60%, 0);
   -webkit-transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
   transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
+  -o-transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
 }
@@ -1113,6 +1224,7 @@ position: absolute;
   background-position: 0 0;
   -webkit-transition: -webkit-transform calc(var(--d) * 1.5) var(--e);
   transition: -webkit-transform calc(var(--d) * 1.5) var(--e);
+  -o-transition: transform calc(var(--d) * 1.5) var(--e);
   transition: transform calc(var(--d) * 1.5) var(--e);
   transition: transform calc(var(--d) * 1.5) var(--e), -webkit-transform calc(var(--d) * 1.5) var(--e);
   pointer-events: none;
@@ -1126,11 +1238,14 @@ position: absolute;
   height: 200%;
   pointer-events: none;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(11.7%, rgba(0, 0, 0, 0.009)), color-stop(22.1%, rgba(0, 0, 0, 0.034)), color-stop(31.2%, rgba(0, 0, 0, 0.072)), color-stop(39.4%, rgba(0, 0, 0, 0.123)), color-stop(46.6%, rgba(0, 0, 0, 0.182)), color-stop(53.1%, rgba(0, 0, 0, 0.249)), color-stop(58.9%, rgba(0, 0, 0, 0.32)), color-stop(64.3%, rgba(0, 0, 0, 0.394)), color-stop(69.3%, rgba(0, 0, 0, 0.468)), color-stop(74.1%, rgba(0, 0, 0, 0.54)), color-stop(78.8%, rgba(0, 0, 0, 0.607)), color-stop(83.6%, rgba(0, 0, 0, 0.668)), color-stop(88.7%, rgba(0, 0, 0, 0.721)), color-stop(94.1%, rgba(0, 0, 0, 0.762)), to(rgba(0, 0, 0, 0.79)));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
   -webkit-transition: -webkit-transform calc(var(--d) * 2) var(--e);
   transition: -webkit-transform calc(var(--d) * 2) var(--e);
+  -o-transition: transform calc(var(--d) * 2) var(--e);
   transition: transform calc(var(--d) * 2) var(--e);
   transition: transform calc(var(--d) * 2) var(--e), -webkit-transform calc(var(--d) * 2) var(--e);
 }
@@ -1158,6 +1273,7 @@ position: absolute;
   margin-top: 10%;
   -webkit-transition: -webkit-transform var(--d) var(--e);
   transition: -webkit-transform var(--d) var(--e);
+  -o-transition: transform var(--d) var(--e);
   transition: transform var(--d) var(--e);
   transition: transform var(--d) var(--e), -webkit-transform var(--d) var(--e);
   z-index: 1;
@@ -1173,16 +1289,13 @@ position: absolute;
   position: relative;
   z-index: auto;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 0px;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   -webkit-box-align: end;
-  -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
   text-align: left;
@@ -1228,17 +1341,20 @@ position: absolute;
 @media (hover: hover) and (min-width: 600px) {
   .card2:after {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+            -ms-transform: translateY(0);
+        transform: translateY(0);
   }
 
   .content2 {
     -webkit-transform: translateY(calc(50%));
-            transform: translateY(calc(50%));
+            -ms-transform: translateY(calc(50%));
+        transform: translateY(calc(50%));
   }
   .content2 > *:not(.title2) {
     opacity: 0;
     -webkit-transition: opacity var(--d) var(--e), -webkit-transform var(--d) var(--e);
     transition: opacity var(--d) var(--e), -webkit-transform var(--d) var(--e);
+    -o-transition: transform var(--d) var(--e), opacity var(--d) var(--e);
     transition: transform var(--d) var(--e), opacity var(--d) var(--e);
     transition: transform var(--d) var(--e), opacity var(--d) var(--e), -webkit-transform var(--d) var(--e);
   }
@@ -1246,37 +1362,44 @@ position: absolute;
   .card2:hover,
   .card2:focus-within {
     -webkit-box-align: center;
-            align-items: center;
+            -ms-flex-align: center;
+        align-items: center;
   }
   .card2:hover:before,
   .card2:focus-within:before {
     -webkit-transform: translateY(-4%);
-            transform: translateY(-4%);
+            -ms-transform: translateY(-4%);
+        transform: translateY(-4%);
   }
   .card2:hover:after,
   .card2:focus-within:after {
     -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
   }
   .card2:hover .content2,
   .card2:focus-within .content2 {
     -webkit-transform: translateY(0%);
-            transform: translateY(0%);
+            -ms-transform: translateY(0%);
+        transform: translateY(0%);
   }
   .card2:hover .content2 > *:not(.title2),
   .card2:focus-within .content2 > *:not(.title2) {
     opacity: 1;
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+            -ms-transform: translateY(0);
+        transform: translateY(0);
     -webkit-transition-delay: calc(var(--d) / 8);
-            transition-delay: calc(var(--d) / 8);
+            -o-transition-delay: calc(var(--d) / 8);
+       transition-delay: calc(var(--d) / 8);
   }
 
   .card2:focus-within:before, .card2:focus-within:after,
   .card2:focus-within .content2,
   .card2:focus-within .content2 > *:not(.title2) {
     -webkit-transition-duration: 0s;
-            transition-duration: 0s;
+            -o-transition-duration: 0s;
+       transition-duration: 0s;
   }
 }
 
@@ -1287,7 +1410,9 @@ position: absolute;
   height: 20px;
   left: 0%;
   top: 0%;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   z-index: 5;
 }
 
@@ -1390,4 +1515,3 @@ a1 {
   border-top: 0.3rem solid #b32844;
   border-bottom: 0.3rem solid #170d14;
 }
-
