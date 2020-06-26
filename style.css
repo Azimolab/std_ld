@@ -644,7 +644,6 @@ position: absolute;
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
   transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
 
-
 }
 
 .content__slide.active .active .image2 {
@@ -985,9 +984,61 @@ position: absolute;
   -o-transition: transform 1125ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: transform 1125ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: transform 1125ms cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 1125ms cubic-bezier(0.165, 0.84, 0.44, 1);
-	
+
 
 }
+
+.button1 {
+  background: rgba(0, 0, 0, 0.2);
+  display: none;
+  margin-top: 52%;
+  margin-left: 37%;
+  width: 20vw;
+  padding: 0.3rem;
+  font-size: 2rem;
+ font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  font-style: italic;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1;
+  font-weight: 600;
+  cursor: pointer;
+  position: absolute;
+  z-index: 5;
+  color: #ffffff;
+
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
+  animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
+}
+
+
+
+
+.button2 {
+  background: rgba(0, 0, 0, 0.2);
+  display: none;
+  margin-top: 52%;
+  margin-left: 37%;
+  width: 20vw;
+  padding: 0.3rem;
+  font-size: 2rem;
+ font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  font-style: italic;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1;
+  font-weight: 600;
+  cursor: pointer;
+  position: absolute;
+  z-index: 5;
+  color: #ffffff;
+
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
+}
+
 .button:before, .button:after, .button__hover {
   content: "";
   position: absolute;
@@ -1125,10 +1176,36 @@ position: absolute;
 
 }
 
-
+.button2-wrap {
+  margin-top: 3%;
+  opacity: 0;
+  -webkit-transform: translatey(2.5rem);
+          -ms-transform: translatey(2.5rem);
+      transform: translatey(2.5rem);
+  position: relative;
+  -webkit-transition: opacity 675ms linear, -webkit-transform 1800ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 675ms linear, -webkit-transform 1800ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: transform 1800ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms linear;
+  transition: transform 1800ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms linear;
+  transition: transform 1800ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms linear, -webkit-transform 1800ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
 
 
 .page-content {
+  position: absolute;
+  font-family: "Open Sans";
+  opacity: 0;
+  width: 94%;
+  height: 55%;
+  left: 50%;
+  top: 55%;
+  opacity: 0;
+  z-index: 3;
+  
+}
+
+
+.page-content2 {
   position: absolute;
   font-family: "Open Sans";
   opacity: 0;
@@ -1143,6 +1220,7 @@ position: absolute;
 
 .page-content.active {
   opacity: 1;
+  z-index: 3;
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
   -webkit-transition: opacity 675ms 2250ms linear, -webkit-transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -1151,6 +1229,8 @@ position: absolute;
   transition: transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2250ms linear, -webkit-transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .page-content.exit {
+  z-index: 0;
+  opacity: 0;
   -webkit-transform: translate3d(-45%, -60%, 0);
           transform: translate3d(-45%, -60%, 0);
   -webkit-transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
@@ -1166,7 +1246,50 @@ position: absolute;
 }
 
 
+.page-content2.active {
+  opacity: 1;
+  z-index: 2;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  -webkit-transition: opacity 675ms 2250ms linear, -webkit-transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 675ms 2250ms linear, -webkit-transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2250ms linear;
+  transition: transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 675ms 2250ms linear, -webkit-transform 2700ms 2250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.page-content2.exit {
+  z-index: 0;
+  opacity: 0;
+  -webkit-transform: translate3d(-45%, -60%, 0);
+          transform: translate3d(-45%, -60%, 0);
+  -webkit-transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
+  transition: opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
+  transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear;
+  transition: transform 1350ms 675ms linear, opacity 675ms 1125ms linear, -webkit-transform 1350ms 675ms linear;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: normal;
+}
+
+
+
+
 .content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: absolute;
+  padding: 0.5rem;
+  width:100%;
+  height:60%;
+  
+}
+
+.content2-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1198,6 +1321,160 @@ position: absolute;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
 }
+
+.news-card2 {
+  border: 0px solid aqua;
+  margin: 0.5rem;
+  position: relative;
+  height: 25rem;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  flex-basis:20%;
+  min-width: 50px;
+  max-width: 100%;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
+
+
+
+.news-card2 {
+  max-width: 100%;  
+  font-style: italic;
+}
+
+
+.news-card2::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 0;
+   }
+
+.news-card2__card-link {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 1;
+/*     background: rgba(255,0,0,.5); */
+ }
+
+.news-card2__image {
+   width: 100%;
+   height: 100%;
+   display: block;
+   -o-object-fit: cover;
+      object-fit: cover;
+   -webkit-transition: -webkit-transform 3s ease;
+   transition: -webkit-transform 3s ease;
+   -o-transition: transform 3s ease;
+   transition: transform 3s ease;
+   transition: transform 3s ease, -webkit-transform 3s ease;
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+   position: relative;
+   z-index: -1;
+ }
+
+.news-card2__text-wrapper {
+   position: absolute;
+   font-family: 'Open Sans', sans-serif;
+   bottom: 0rem;
+   padding: 1rem;
+   color: white;
+/*     background-color: rgba(0, 0, 0, 0.4); */
+   -webkit-transition: background-color 1s ease;
+   -o-transition: background-color 1s ease;
+   transition: background-color 1s ease;
+ }
+
+.news-card2__title {
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 800;
+   font-style: italic;
+   font-size: 1.4em;
+   -webkit-transition: color 1s ease;
+   -o-transition: color 1s ease;
+   transition: color 1s ease;
+   margin-bottom: .5rem;
+ }
+
+
+.news-card2__details-wrapper {
+   max-height: 0;
+   opacity: 0;
+   -webkit-transition: max-height 1.5s ease, opacity 1s ease;
+   -o-transition: max-height 1.5s ease, opacity 1s ease;
+   transition: max-height 1.5s ease, opacity 1s ease;
+ }
+
+@media (min-width: 700px) {
+   .news-card2:hover .news-card2__details-wrapper {
+     max-height: 20rem;
+     opacity: 1;
+   }
+   .news-card2:hover .news-card2__text-wrapper {
+     background-color: rgba(0, 0, 0, 0.3);
+   }
+   .news-card2:hover .news-card2__title {
+     color:white;
+   }
+   .news-card2:hover .news-card2__image {
+     -webkit-transform: scale(1.2);
+         -ms-transform: scale(1.2);
+             transform: scale(1.2);
+     z-index: -1;
+   }
+ }
+ 
+.news-card2__excerpt {
+
+ }
+
+.news-card2__read-more {
+   background: black;
+   opacity: 0.8;
+   color: white;
+   display: block;
+   padding: 0.4rem 0.6rem;
+   margin-top: 1rem;
+   font-size: 0.8rem;
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+   text-decoration: none;
+   width: 6rem;
+   margin-left: auto;
+   position: relative;
+   z-index: 5;
+   text-transform: uppercase;
+   border-top: 0.3rem solid #b32844;
+   font-weight: 800;
+   font-family: 'Open Sans', sans-serif;
+   font-style: italic;
+ }
+
+ .news-card2__read-more:hover {
+   background-color: #0d0d0d;
+ }
+ .news-card2__read-more:focus {
+   outline-offset: 5px;
+ }
+
+
+
+
+
 
 @media (min-width: 700px) {
 
@@ -1370,3 +1647,276 @@ position: absolute;
 
 
 
+
+  
+
+
+
+ @-webkit-keyframes text-flicker-in-glow {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  10.1% {
+    opacity: 1;
+    text-shadow: none;
+  }
+  10.2% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  20% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  20.1% {
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  30% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  30.1% {
+    opacity: 1;
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  55.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  57% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  57.1% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  65% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  77% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  86% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes text-flicker-in-glow {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  10.1% {
+    opacity: 1;
+    text-shadow: none;
+  }
+  10.2% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  20% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  20.1% {
+    opacity: 1;
+   
+  }
+  20.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  30% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  30.1% {
+    opacity: 1;
+    
+  }
+  30.5% {
+    opacity: 1;
+    
+  }
+  30.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45.1% {
+    opacity: 1;
+   
+  }
+  50% {
+    opacity: 1;
+    
+  }
+  55% {
+    opacity: 1;
+    
+  }
+  55.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  57% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  57.1% {
+    opacity: 1;
+    
+  }
+  60% {
+    opacity: 1;
+    
+  }
+  60.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  65% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  65.1% {
+    opacity: 1;
+   
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  77% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  86% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+.fade-in {
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
+}
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-6-26 1:4:6
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-in
+ * ----------------------------------------
+ */
+ @-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
